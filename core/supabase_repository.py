@@ -1,6 +1,6 @@
 from typing import Any
 
-from core.supabase_client import supabase
+from core.supabase_client import get_client
 
 
 class SupabaseRepository:
@@ -10,7 +10,7 @@ class SupabaseRepository:
 
     @property
     def table(self):
-        return supabase.table(self.table_name)
+        return get_client().table(self.table_name)
 
     def list(self, columns: str = "*") -> list[dict[str, Any]]:
         return self.table.select(columns).execute().data or []

@@ -1,7 +1,7 @@
-from core.supabase_client import supabase
+from core.supabase_client import get_client
 
 try:
-    response = supabase.table("countries").select("*").limit(5).execute()
+    response = get_client().table("countries").select("*").limit(5).execute()
 
     print("✅ Conexión exitosa con Supabase")
     print("Datos encontrados:", response.data)
