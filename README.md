@@ -424,10 +424,10 @@ en el repo y Kiro lo pueda leer):
 |---|---|---|
 | `countries` | Países soportados y su fuente principal | `apps/locations` |
 | `locations` | Lugares (ciudad, región, coordenadas) | `apps/locations` |
-| `weather_categories` | **Catálogo de peligros** (slug, nombre, categoría, ícono) | `apps/weather` |
+| `weather_categories` | **Catálogo de peligros** (`code`, `name`, `description`, `animation_key`) | `apps/weather` |
 | `weather_observations` | Datos de pronóstico guardados (caché) | `apps/weather` |
 | `weather_alerts` | Alertas normalizadas (caché e historial) | `apps/alerts` |
-| `prevention_recommendations` | Qué hacer antes, durante y después por peligro y país | `apps/recommendations` |
+| `prevention_recommendations` | Recomendaciones por peligro y país — una fila por acción (`category_id`, `severity`, `title`, `description`) | `apps/recommendations` |
 | `profiles` | Perfil de usuario (opcional) | `apps/users` |
 | `user_locations` | Lugares guardados por un usuario | `apps/users` |
 | `notifications` | Avisos enviados a usuarios | `apps/notifications` |

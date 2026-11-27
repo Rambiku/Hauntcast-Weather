@@ -1,7 +1,8 @@
 """URL configuration for Hauntcast Weather."""
-from django.urls import path, include
+from django.urls import include, path
 
 urlpatterns = [
     path("api/v1/locations/", include("apps.locations.urls")),
-    # Future apps add their routes here under api/v1/<app>/
+    path("api/v1/", include("apps.weather.urls")),
+    path("api/v1/", include("apps.recommendations.urls")),
 ]
